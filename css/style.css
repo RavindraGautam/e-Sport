@@ -1,0 +1,34 @@
+*{
+	margin:0px; padding:0px; box-sizing: border-box;
+	font-family: 'Josefin Slab', serif;
+}
+.bg-img {
+  /* The image used */
+  background-image: url("../images/LLL.jpg");
+
+  min-height: 380px;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  /* Needed to position the navbar */
+  position: relative;
+}
+/* Position the navbar container inside the image */
+.container {
+  position: absolute;
+  margin: 20px;
+  width: auto;
+}
+
+/* The navbar */
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+.aboutimg{
+	width:100%;
+	height:250px!important;
+}
