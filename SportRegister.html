@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Sport Register</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</head>
+<body>
+<section class="my-4">
+	<div class="py-5">
+		<h3 class="text-center">Register Here</h3>
+	</div>
+	<div class="container w-50 m-auto">
+	  <form action="sportRegister.php" method="POST">
+		<div class="form-group">
+		  <label for="uname">Name<sup>&#9733;</sup></label>
+		  <input type="text" class="form-control" id="uname" placeholder="Enter Fullname" name="uname" required >
+		  <div class="invalid-feedback">Please fill your name.</div>
+		</div>
+		<div class="form-group">
+		  <label for="email">Email id<sup>&#9733;</sup></label>
+		  <input type="email" class="form-control" id="email" placeholder="Email" name="email" required>
+		  <div class="invalid-feedback">Please enter your right email id.</div>
+        </div>
+		<div class="form-group">
+		  <label for="mobileno">Mobile number<sup>&#9733;</sup></label>
+		  <input type="number" class="form-control" id="mobileno" placeholder="Enter mobile number" name="mobileno" required>
+		  <div class="invalid-feedback">Please enter mobile no.</div>
+		</div>
+		<div class="form-group">
+		  <label for="dob">Date Of birth<sup>&#9733;</sup></label>
+		  <input type="text" class="form-control" id="dob" placeholder="DD/MM/YYYY" name="dob" required>
+		  <div class="invalid-feedback">Please enter mobile no.</div>
+		</div>
+		<div class="form-group">
+		  <label for="sel1">Branch<sup>&#9733;</sup></label>
+		  <select class="form-control" id="sel1" name="branch" required>
+		    <option>Select</option>
+			<option>CIVIL ENGINEERING</option>
+			<option>ELECTRICAL ENGINEERING</option>
+			<option>COMPUTER SCIENCE ENGINEERING</option>
+			<option>INFORMATION TECHNOLOGY</option>
+			<option>MECHANICAL ENGINEERING</option>
+			<div class="invalid-feedback">Please enter mobile no.</div>
+		  </select>
+        </div>
+		<div class="form-group">
+		  <label for="sel1">Year<sup>&#9733;</sup></label>
+		  <select class="form-control" id="sel1" name="year" required>
+		    <option>Select</option>
+			<option>First Year</option>
+			<option>Second Year</option>
+			<option>Third Year</option>
+			<option>Final Year</option>
+		  </select>
+        </div>
+		<div class="form-group">
+		  <label for="sel1">Gender<sup>&#9733;</sup></label>
+		  <select class="form-control" id="sel1" name="gender">
+		    <option>Select</option>
+			<option>Male</option>
+			<option>Female</option>
+			<option>Other</option>
+		  </select>
+        </div>
+		<div class="form-group">
+			<label>Fill Game Name</label>
+			<textarea class="form-control" name="choosegame" required>
+			</textarea>
+			<span ><small>Plese fill game name in which you participate<br>
+			i.e.- cricket, football, vollyball, kabaddi, Chess, Table Tannis, Badminton, Carrom etc.</small></span>
+		</div>
+		
+		
+		
+		<div class="form-group">
+				<label>Address</label>
+				<textarea class="form-control" name="address" required>
+				</textarea>
+		</div>
+		
+		
+		<button type="submit" class="btn btn-primary">Submit</button>
+		<a type="submit" class="btn btn-danger mx-6" href="home.php">Cancle</a>
+	  </form>
+	</div>
+</section>
+
+<script>
+// Disable form submissions if there are invalid fields
+(function() {
+  'use strict';
+  window.addEventListener('load', function() {
+    // Get the forms we want to add validation styles to
+    var forms = document.getElementsByClassName('needs-validation');
+    // Loop over them and prevent submission
+    var validation = Array.prototype.filter.call(forms, function(form) {
+      form.addEventListener('submit', function(event) {
+        if (form.checkValidity() === false) {
+          event.preventDefault();
+          event.stopPropagation();
+        }
+        form.classList.add('was-validated');
+      }, false);
+    });
+  }, false);
+})();
+</script>
+
+</body>
+</html>
